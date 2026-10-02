@@ -1,0 +1,6 @@
+# RODE devices: allow the logged-in user to talk to the HID control interface
+# (used by RODE Central replacements such as rodecaster-control) without root.
+# Vendor-wide match so it survives the product-id change the RODECaster makes
+# when multitrack mode is toggled.
+KERNEL=="hidraw*", ATTRS{idVendor}=="19f7", MODE="0660", TAG+="uaccess"
+SUBSYSTEM=="usb", ATTRS{idVendor}=="19f7", MODE="0660", TAG+="uaccess"

@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+
+# firmware images and build output — do not commit (large, and RØDE's)
+stock/
+out/
+*.tar.gz
+*.md5
+*.zip
+
+# never commit keys
+*.pub
+id_*
+*_ed25519
+*_rsa
+*.pem
+*.key
